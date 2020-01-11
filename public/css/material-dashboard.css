@@ -12597,6 +12597,7 @@ fieldset[disabled][disabled] .has-rose .form-control,
 .bmd-form-group label,
 .bmd-form-group input::placeholder {
   line-height: 1.1;
+  padding-left: 5px;
 }
 
 .bmd-form-group label {
@@ -12825,6 +12826,7 @@ fieldset[disabled][disabled] .has-rose .form-control,
 label,
 input::placeholder {
   line-height: 1.1;
+    padding-left: 5px;
 }
 
 label {
@@ -14137,7 +14139,7 @@ h2.title {
 .dropdown-menu a:focus,
 .dropdown-menu a:active {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
-  background-color: #9c27b0;
+  background-color: #2257ba;
   color: #FFFFFF;
 }
 

@@ -66,12 +66,13 @@ Route::middleware(['auth'])->prefix('in')->group(function () {
 
     Route::resource('estado', 'EstadoController');
 
-    Route::get('/anuncio', 'AnuncioController@index'); // Ver los anuncios
+    Route::get('/anuncio', 'AnuncioController@index')->name('anuncio'); // Ver los anuncios
     Route::get('/anuncio/create', 'AnuncioController@create'); //Crear nuevo anuncio ver formulario
     Route::post('/anuncio', 'AnuncioController@store'); //Guardar nuevo anuncio, registrar
     Route::get('/anuncio/{id}/edit', 'AnuncioController@edit'); // formulario de edicion
-    Route::post('/anuncio/{id}/edit', 'AnuncioController@update'); // update
+    Route::post('/anuncio/{id}/edit', 'AnuncioController@update')->name('anuncio.update'); // update
 
+    Route::get('/seller', 'SellerController@perfil'); //Ver mi perfil gestor
 });
 
 

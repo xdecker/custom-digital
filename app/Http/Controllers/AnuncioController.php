@@ -54,7 +54,7 @@ class AnuncioController extends Controller
         $anuncio = Anuncio::create($input);
 
 
-        return redirect()->route('anuncio.index')->with('success', 'Registro creado satisfactoriamente');
+        return redirect()->route('anuncio')->with('success', 'Registro creado satisfactoriamente');
     }
 
 
@@ -98,9 +98,12 @@ class AnuncioController extends Controller
         //registrar y almacenar nuevo anuncio
         //dd($request->all());
         $anuncios = Anuncio::find($id);
-        $anuncios->nombreEmpresa = $request->input('nombreEmpresa');
-        $anuncios->tipoEmpresa = $request->input('tipoEmpresa');
-        $anuncios->telefono = $request->input('telefono');
+        $anuncios->nombre = $request->input('nombre');
+        $anuncios->descripcion = $request->input('descripcion');
+        $anuncios->ubicacion = $request->input('ubicacion');
+        $anuncios->palabrasClaves = $request->input('palabrasClaves');
+        $anuncios->fechaInicio = $request->input('fechaInicio');
+        $anuncios->fechaFin = $request->input('fechaFin');
         $anuncios->save(); //Update
         $anuncios = Anuncio::paginate(10);
 

@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $this->belongsto(Role::class);
     }
 
+    public function seller()
+    {
+        return $this->hasOne(Seller::class);
+    }
+
 
 
 }

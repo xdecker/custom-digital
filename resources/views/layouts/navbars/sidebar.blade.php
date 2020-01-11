@@ -40,15 +40,15 @@
                 </a>
         </li>
 
-        <li class="nav-item{{ $activePage == 'Gestor de Ventas' ? ' active' : '' }}">
+        <li class="nav-item{{ $activePage == 'Seller de Ventas' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('user.index') }}">
                     <i class="material-icons">group</i>
-                    <p>{{_('Gestor de Ventas')}}</p>
+                    <p>{{_('Seller de Ventas')}}</p>
                 </a>
         </li>
 
         <li class="nav-item{{ $activePage == 'Anuncios' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('user.index') }}">
+                <a class="nav-link" href="{{ route('anuncio') }}">
                     <i class="material-icons">assessment</i>
                     <p>{{_('Anuncios')}}</p>
                 </a>
@@ -62,12 +62,33 @@
                 </a>
         </li>
 
-         <li class="nav-item{{ $activePage == 'Importar-base' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('user.index') }}">
-                    <i class="material-icons">description</i>
-                    <p>{{_('Importar Base')}}</p>
-                </a>
-         </li>
+        <li class="nav-item {{($activePage == 'Importar Base de Datos' || $activePage == 'Ver Bases Asignadas') ? 'active' : ''}}">
+            <a class="nav-link" data-toggle="collapse" href="#DropdownBD" aria-expended="true">
+                <i class="material-icons">assignment</i>
+                <p>{{_('Bases de Datos')}}
+                    <b class="caret"></b>
+                </p>
+            </a>
+
+        </li>
+
+        <div class="collapse show" id="DropdownBD">
+            <ul class="nav">
+                <li class="nav-item{{$activePage == 'Importar Base de Datos' ? 'active' : ''}}">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">backup</i>
+                        <span class="sidebar-normal">{{_('Importar Bases')}}</span>
+                    </a>
+                </li>
+                <li class="nav-item{{$activePage == 'Ver Bases Asignadas' ? 'active' : ''}}">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">description</i>
+                        <span class="sidebar-normal">{{_('Ver Bases Asignadas')}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <br><br>
 <div style="display:none">
         <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('table') }}">
