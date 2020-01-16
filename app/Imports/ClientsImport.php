@@ -3,6 +3,7 @@
 namespace App\Imports;
 
 use App\Client;
+
 use Maatwebsite\Excel\Concerns\{Importable, ToModel, WithHeadingRow, WithValidation};
 
 class ClientsImport implements ToModel, WithHeadingRow, WithValidation
@@ -13,15 +14,22 @@ class ClientsImport implements ToModel, WithHeadingRow, WithValidation
     {
         return new Client([
             //
+            'name' => $row['name'],
+            'email' => $row['email'],
+            'phone' => $row['phone'],
+            'observations' => $row['observations'],
+            'registrationDate' => date('Y/m/d H:i:s', strtotime($row['registrationdate'])),
+
         ]);
     }
 
     public function rules(): array
     {
         return [
-            'registration_number' => 'regex:/[A-Z]{3}-[0-9]{3}/',
-            'doors' => 'in:2,4,6',
-            'years' => 'between:1998,2017'
+            'name' => 'min:3',
+            'email' => 'email',
+            'phone' => 'digits:10|min:0|max:10',
+
         ];
     }
 }

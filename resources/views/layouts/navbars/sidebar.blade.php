@@ -62,7 +62,7 @@
                 </a>
         </li>
 
-        <li class="nav-item {{($activePage == 'Importar Base de Datos' || $activePage == 'Ver Bases Asignadas') ? 'active' : ''}}">
+        <li class="nav-item {{($activePage == 'Importar-BaseDatos' || $activePage == 'Ver Bases Asignadas') ? 'active' : ''}}">
             <a class="nav-link" data-toggle="collapse" href="#DropdownBD" aria-expended="true">
                 <i class="material-icons">assignment</i>
                 <p>{{_('Bases de Datos')}}
@@ -74,8 +74,8 @@
 
         <div class="collapse show" id="DropdownBD">
             <ul class="nav">
-                <li class="nav-item{{$activePage == 'Importar Base de Datos' ? 'active' : ''}}">
-                    <a class="nav-link" href="#">
+                <li class="nav-item{{$activePage == 'Importar-BaseDatos' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{url('in/import')}}">
                         <i class="material-icons">backup</i>
                         <span class="sidebar-normal">{{_('Importar Bases')}}</span>
                     </a>

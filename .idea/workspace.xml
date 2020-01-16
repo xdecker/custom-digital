@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c6290a-95d4-44ef-b3b1-dcf15ec8746d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/File.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SellerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Imports/ClientsImport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Seller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_07_023141_create_sellers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_055022_create_clients_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_061607_create_files_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_062446_add_file_id_to_clients_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_063934_add_anuncio_id_to_files_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/anuncio/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/seller/perfil.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/custom-digital.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/custom-digital.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_12_230242_delete_columns_to_clients_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/file/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Anuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anuncio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnuncioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnuncioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/File.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Imports/ClientsImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/ClientsImport.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/material-dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/anuncio/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/anuncio/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/anuncio/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/anuncio/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/auth.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/company/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/company/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -158,10 +141,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/file" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\custom-digital\resources\views\file" />
       <recent name="C:\xampp\htdocs\custom-digital\public\css" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\gestor" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\anuncio" />
@@ -210,7 +195,9 @@
       <workItem from="1578160079077" duration="17000" />
       <workItem from="1578261454605" duration="10489000" />
       <workItem from="1578279131416" duration="26149000" />
-      <workItem from="1578708316950" duration="7608000" />
+      <workItem from="1578708316950" duration="10045000" />
+      <workItem from="1578788268756" duration="2560000" />
+      <workItem from="1578796316617" duration="30613000" />
     </task>
     <servers />
   </component>
@@ -233,6 +220,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578697233799" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1578796554463">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578796554463" />
     <state x="384" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1578279135418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

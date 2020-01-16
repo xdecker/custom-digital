@@ -67,6 +67,7 @@
                         <div class="col-sm-7">
                             <div class="form-group">
                                 <select class="form-control" name="name_users" id="">
+                                    <option value="" selected disabled>Seleccionar usuario</option>
                                     @foreach ($users as $users)
                                         <option value="{{$users->id}}"> {{$users->name}}</option>
                                     @endforeach

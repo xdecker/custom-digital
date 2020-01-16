@@ -7,14 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class File extends Model
 {
     //
-    protected $fillable = [];
+    protected $fillable = ['nameFile', 'description', 'seller_id', 'anuncio_id'];
 
     protected $hidden = [];
 
-    public function sellers()
-    {
-
-    }
 
     public function ads()
     {
