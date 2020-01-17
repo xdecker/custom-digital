@@ -19,7 +19,7 @@ class CreateClientsTable extends Migration
             $table->string('email');
             $table->string('phone')->nullable();
             $table->string('observations')->nullable();
-            $table->date('registrationDate');
+            $table->string('registrationDate');
 
 
             //Claves foraneas

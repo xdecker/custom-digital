@@ -41,7 +41,13 @@
                   </div>
                 @endif
                 <div class="row">
+                    <label class="col-sm-2 col-from-label"></label>
+                    <div class="col-md-6">
+                        <p> <a class="btn btn-info btn-sm"  href="{{ asset('material') }}/formato.xls">Descargar formato aquí</a></p>
+                    </div>
+                </div>
 
+                    <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('Subir archivo') }}</label>
 
                       <div class="col-sm-6 ">
@@ -67,7 +73,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Anuncio') }}</label>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <select class="form-control" name="name_anuncios" id="">
+                                <select class="form-control" name="name_anuncios" id="" >
                                     <option value="" selected disabled>Seleccionar anuncio</option>
                                     @foreach ($anuncios as $anuncios)
                                         <option value="{{$anuncios->id}}"> {{$anuncios->nombre}}</option>

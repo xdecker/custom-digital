@@ -18,7 +18,7 @@ class ClientsImport implements ToModel, WithHeadingRow, WithValidation
             'email' => $row['email'],
             'phone' => $row['phone'],
             'observations' => $row['observations'],
-            'registrationDate' => date('Y/m/d H:i:s', strtotime($row['registrationdate'])),
+            'registrationDate' => $row['registrationdate'],
 
         ]);
     }
@@ -29,6 +29,7 @@ class ClientsImport implements ToModel, WithHeadingRow, WithValidation
             'name' => 'min:3',
             'email' => 'email',
             'phone' => 'digits:10|min:0|max:10',
+            'registrationDate' => 'max:10',
 
         ];
     }

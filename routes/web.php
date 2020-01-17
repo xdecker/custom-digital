@@ -72,7 +72,7 @@ Route::middleware(['auth'])->prefix('in')->group(function () {
     Route::get('/anuncio/{id}/edit', 'AnuncioController@edit'); // formulario de edicion
     Route::post('/anuncio/{id}/edit', 'AnuncioController@update')->name('anuncio.update'); // update
 
-    Route::get('/seller', 'SellerController@perfil'); //Ver mi perfil gestor
+    Route::get('/seller', 'SellerController@perfil')->name('gestor'); //Ver mi perfil gestor
     Route::get('/import', 'ClientController@create'); // Importar bases, vista formulario
     Route::post('/import', 'ClientController@import')->name('upload'); // Carga de archivo
 });
