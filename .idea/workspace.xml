@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c6290a-95d4-44ef-b3b1-dcf15ec8746d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/files_import/Book1.xls1579235292" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/Book1.xlsx1579230410" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/Book1.xlsx1579231691" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/Book1.xlsx1579231813" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/Book1.xlsx1579233220" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/formato.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/formato.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/img/logo_cdblanco.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mail/MessageReceived.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_23_015503_create_messages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files_import/formato(1).xls1579572597" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files_import/formato.xls1579570763" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Imports/ClientsImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/ClientsImport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_11_055022_create_clients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_055022_create_clients_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/file/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/file/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/auth.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/guest.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,16 +138,16 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/file" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/email" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\custom-digital\resources\views\email" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\file" />
       <recent name="C:\xampp\htdocs\custom-digital\public\css" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\gestor" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\anuncio" />
-      <recent name="C:\xampp\htdocs\custom-digital\resources\views\company" />
     </key>
   </component>
   <component name="RunManager">
@@ -204,6 +196,8 @@
       <workItem from="1578788268756" duration="2560000" />
       <workItem from="1578796316617" duration="30613000" />
       <workItem from="1579227618816" duration="7346000" />
+      <workItem from="1579570292902" duration="1860000" />
+      <workItem from="1579638162022" duration="6987000" />
     </task>
     <servers />
   </component>
@@ -230,10 +224,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578796554463" />
-    <state x="384" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1579227663824">
+    <state x="384" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1579638171746">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579227663824" />
+    <state x="384" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579638171746" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1578268337807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

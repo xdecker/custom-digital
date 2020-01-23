@@ -75,6 +75,9 @@ Route::middleware(['auth'])->prefix('in')->group(function () {
     Route::get('/seller', 'SellerController@perfil')->name('gestor'); //Ver mi perfil gestor
     Route::get('/import', 'ClientController@create'); // Importar bases, vista formulario
     Route::post('/import', 'ClientController@import')->name('upload'); // Carga de archivo
+
+    Route::get('/sendmail', 'MessagesController@create'); //Veo el formulario para mandar mail
+    Route::post('/sendmail', 'MessagesController@store');  //Realizo el envio
 });
 
 
