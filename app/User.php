@@ -35,7 +35,7 @@ class User extends Authenticatable
     public function company()
     {
         //Varios usuarios corresponde a una compania
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(Company::class, 'company_id');
 
     }
 

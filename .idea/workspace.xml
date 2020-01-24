@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c6290a-95d4-44ef-b3b1-dcf15ec8746d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Mail/MessageReceived.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_23_015503_create_messages_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(1).xls1579572597" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato.xls1579570763" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/email/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_24_204647_add_column_to_messages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/email-attachments/login2.jpg1579902358" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/recieved.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/MessageReceived.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/MessageReceived.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/email/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/email/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +197,7 @@
       <workItem from="1578796316617" duration="30613000" />
       <workItem from="1579227618816" duration="7346000" />
       <workItem from="1579570292902" duration="1860000" />
-      <workItem from="1579638162022" duration="6987000" />
+      <workItem from="1579638162022" duration="25635000" />
     </task>
     <servers />
   </component>

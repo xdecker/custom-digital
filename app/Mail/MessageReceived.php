@@ -18,11 +18,18 @@ class MessageReceived extends Mailable
      */
 
     public $msg;
+    public $subject;
+    public $name;
+    public $address;
 
     public function __construct($email)
     {
         //
         $this->msg = $email;
+        $this->name = $email['nombre'];
+        $this->subject = $email['asunto'];
+        $this->address = 'custom.digital.iig@gmail.com';
+
     }
 
     /**
@@ -32,6 +39,8 @@ class MessageReceived extends Mailable
      */
     public function build()
     {
-        return $this->view('email.create');
+        $mail=$this->msg;
+
+        return $this->view('email.recieved')->with(compact('mail'));
     }
 }
