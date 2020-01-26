@@ -65,6 +65,6 @@ class MessagesController extends Controller
 
         Mail::to($request->correo)->send(new MessageReceived($email));
 
-        return redirect('in/sendmail')->with('success','Email enviado correctamente ');
+        return redirect('in/sendmail')->with('status','Email enviado correctamente ');
     }
 }

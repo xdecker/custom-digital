@@ -10,7 +10,7 @@ class Client extends Model
     protected $guarded = [];
 
     protected $fillable = [
-        'name', 'email', 'phone', 'observations', 'registrationDate'
+        'name', 'email', 'phone', 'observations', 'registrationDate', 'anuncio_id', 'seller_id',
     ];
 
     protected $hidden = [];

@@ -52,6 +52,11 @@ class ClientController extends Controller
 
             $nombreArchivo = $file->getClientOriginalName() . time();
 
+            //$sesion_anuncio = $request->input('name_anuncios')->session()->get('anuncio');
+        session(['anuncio' => $request->input('name_anuncios')]);
+
+        $valor_anuncio = session('anuncio');
+
             (new ClientsImport)->import($file);
 
             $file->move(public_path() . '/files_import/', $nombreArchivo);
@@ -62,7 +67,7 @@ class ClientController extends Controller
             $upload->seller_id = $seller_id;
             $upload->save();
 
-            return redirect('/in/import')->with('success', 'File imported successfully!');
+            return redirect('/in/import')->with('status', 'Archivo cargado correctamente');
 
     }
 

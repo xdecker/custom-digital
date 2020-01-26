@@ -79,7 +79,7 @@ class CompanyController extends Controller
 
 
 
-        return redirect('/in/company/')->with('success','compania creada');
+        return redirect('/in/company/')->with('status','compañía creada correctamente');
     }
 
 

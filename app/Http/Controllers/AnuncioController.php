@@ -54,7 +54,7 @@ class AnuncioController extends Controller
         $anuncio = Anuncio::create($input);
 
 
-        return redirect()->route('anuncio')->with('success', 'Registro creado satisfactoriamente');
+        return redirect()->route('anuncio')->with('status', 'Registro creado satisfactoriamente');
     }
 
 
