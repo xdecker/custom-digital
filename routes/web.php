@@ -78,6 +78,12 @@ Route::middleware(['auth'])->prefix('in')->group(function () {
 
     Route::get('/sendmail', 'MessagesController@create'); //Veo el formulario para mandar mail
     Route::post('/sendmail', 'MessagesController@store');  //Realizo el envio
+
+
+    //REPORTES
+    Route::get('/report/clients_ads', 'ReportController@rclient_ad'); // Ver reporte de clientes por anuncio
+    Route::get('/report/clients_sellers', 'ReportController@rclient_seller'); // Ver reporte de clientes asignados por gestores
+
 });
 
 

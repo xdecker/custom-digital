@@ -25,7 +25,7 @@ class CompanyController extends Controller
     public function create()
     {
         //crear compania, mostrar formulario
-        $users = User::where('type', '=', 'noAdm')->paginate(10);
+        $users = User::where('role_id', '=', 2)->get();
         return view('company.create')->with(compact('users'));
     }
 
@@ -53,9 +53,7 @@ class CompanyController extends Controller
         //dd($request->all());
 
         $user = User::find($request->input('name_users'));
-        $user->type = 'Adm';
-        //$user_id->id = 1;
-        //$user_id->id = $request->input('name_users');
+        $user->role_id = 1;
 
         if($request->hasFile('logo')){
             $file = $request->file('logo');
@@ -69,9 +67,6 @@ class CompanyController extends Controller
         $companies->tipoEmpresa = $request->input('tipoEmpresa');
         $companies->telefono = $request->input('telefono');
         $companies->logo = $nombreArchivo;
-        // $companies->user_id = 1;
-        //$max_id = Company::whereRaw('id = (select max(`id`) from companies)')->get();
-        //dd($max_id);
 
         $companies->save(); //Insert
         $user->company_id = $companies->id;

@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c6290a-95d4-44ef-b3b1-dcf15ec8746d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_26_224827_add_column_to_clients_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580080181" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580080435" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580080715" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580080776" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580080829" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580081216" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580081305" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580081386" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580081576" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580081884" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1580082077" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/report/clientesxanuncio.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/report/clientesxgestor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnuncioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnuncioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Imports/ClientsImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/ClientsImport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/formato.xls" beforeDir="false" afterPath="$PROJECT_DIR$/public/material/formato.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/company/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/company/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,16 +140,16 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/email" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/report" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\custom-digital\resources\views\report" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\email" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\file" />
       <recent name="C:\xampp\htdocs\custom-digital\public\css" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\gestor" />
-      <recent name="C:\xampp\htdocs\custom-digital\resources\views\anuncio" />
     </key>
   </component>
   <component name="RunManager">
@@ -209,7 +200,7 @@
       <workItem from="1579227618816" duration="7346000" />
       <workItem from="1579570292902" duration="1860000" />
       <workItem from="1579638162022" duration="28724000" />
-      <workItem from="1580077353424" duration="4615000" />
+      <workItem from="1580077353424" duration="28620000" />
     </task>
     <servers />
   </component>

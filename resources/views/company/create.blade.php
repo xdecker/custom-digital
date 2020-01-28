@@ -72,7 +72,6 @@
                                         <option value="{{$users->id}}"> {{$users->name}}</option>
                                     @endforeach
                                 </select>
-                                <!--<input class="form-control" name="telefono" type="text" placeholder="{{ __('Phone') }}" value="" required="true" aria-required="true"/> -->
                             </div>
                         </div>
                </div>

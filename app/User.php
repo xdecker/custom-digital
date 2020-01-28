@@ -41,7 +41,7 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsto(Role::class);
+        return $this->belongsto(Role::class, 'role_id');
     }
 
     public function seller()
