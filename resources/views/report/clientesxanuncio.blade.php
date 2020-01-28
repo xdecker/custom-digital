@@ -16,7 +16,7 @@
     <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
 
     <script type="text/javascript">
-        var json = <?php echo dd($anuncio); ?>
+        var json = <?php echo $anuncio; ?>
 
         //console.log( JSON.stringify(json) );
         google.charts.load('current', {'packages':['corechart']});
