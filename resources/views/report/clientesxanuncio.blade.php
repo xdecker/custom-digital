@@ -24,16 +24,7 @@
 
                     <div class="table-responsive">
                         <table class="table table-striped table-borderless" style="text-align:center; vertical-align:middle">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th><b>Nombre de Anuncio</b></th>
-                                <th><b>Descripcion de anuncio</b></th>
-                                <th><b>Ubicaciones</b></th>
-                                <th><b>Intereses</b></th>
-                                <th><b>Fecha de Inicio</b></th>
-                                <th><b>Fecha de Fin</b></th>
-                            </tr>
-                            </thead>
+
                             <tbody>
 
                             </tbody>
@@ -104,6 +95,14 @@
 
                     for(var count=0; count < data.length; count++)
                     {
+                        html += '<tr >';
+                        html += '<td class="table-dark"><b>Nombre de Anuncio</b></td>';
+                        html += '<td class="table-dark"><b>Descripcion de anuncio</b></td>';
+                        html += '<td class="table-dark"><b>Ubicaciones</b></td>';
+                        html += '<td class="table-dark"><b>Intereses</b></td>';
+                        html += '<td class="table-dark"><b>Fecha de Inicio</b></td>';
+                        html += '<td class="table-dark"><b>Fecha de Fin</b></td>';
+                        html += '</tr>';
                         html +='<tr class="table-success">';
                         html +='<td contenteditable class="column_name" data-column_name="nombre" data-id="'+data[count].id+'"><b>'+data[count].nombre+'</b></td>';
                         html +='<td contenteditable class="column_name" data-column_name="descripcion" data-id="'+data[count].id+'"><b>'+data[count].descripcion+'</b></td>';

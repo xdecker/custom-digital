@@ -82,6 +82,14 @@
               <h4 class="card-title">Daily Sales</h4>
               <p class="card-category">
                 <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+
+
+
+                    <canvas id="speedChart" width="600" height="400"></canvas>
+
+
+
+
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -423,6 +431,41 @@
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
       md.initDashboardPageCharts();
+
+      function graficar1(){
+          var speedCanvas = document.getElementById("speedChart");
+
+          Chart.defaults.global.defaultFontFamily = "Lato";
+          Chart.defaults.global.defaultFontSize = 18;
+
+          var speedData = {
+              labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+              datasets: [{
+                  label: "Car Speed (mph)",
+                  data: [0, 59, 75, 20, 20, 55, 40],
+              }]
+          };
+
+          var chartOptions = {
+              legend: {
+                  display: true,
+                  position: 'top',
+                  labels: {
+                      boxWidth: 80,
+                      fontColor: 'black'
+                  }
+              }
+          };
+
+          var lineChart = new Chart(speedCanvas, {
+              type: 'line',
+              data: speedData,
+              options: chartOptions
+          });
+
+      }
+
+
     });
   </script>
 @endpush
