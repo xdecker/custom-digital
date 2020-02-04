@@ -81,7 +81,10 @@ Route::middleware(['auth'])->prefix('in')->group(function () {
 
 
     //REPORTES
-    Route::get('/report/clients_ads', 'ReportController@rclient_ad'); // Ver reporte de clientes por anuncio
+
+    Route::get('/report/clients_ads', 'ReportController@index'); // Ver reporte de clientes por anuncio
+    Route::get('/table/fetch_data', 'ReportController@fetch_data');
+    Route::get('/table/fetch_data2', 'ReportController@fetch_data2');
     Route::get('/report/clients_sellers', 'ReportController@rclient_seller'); // Ver reporte de clientes asignados por gestores
 
 });

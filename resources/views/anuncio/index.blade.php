@@ -46,23 +46,21 @@
                               @if($anuncios->count())
                                   @foreach($anuncios as $anuncios)
                                       <tr>
-                                          <td style="font-weight:500">{{$anuncios->nombreEstado}}</td>
+                                          <td style="font-weight:500">{{$anuncios->nombre}}</td>
 
                                           <td class ="td-actions text-right">
-                                          <!--                                  <a class="btn btn-primary btn-xs" href="{{action('EstadoController@edit', $estado->id)}}" >
-                                      <span class="material-icons">edit</span></a>
--->
 
 
-                                              <form action="{{route('estado.destroy', $estado->id)}}" method="post">
+
+                                              <form action="{{route('estado.destroy', $anuncios->id)}}" method="post">
                                                   @csrf
                                                   @method('delete')
 
-                                                  <a rel="tooltip" class="btn btn-primary btn-link" title="" data-original-title="Editar estado" href="{{action('EstadoController@edit', $estado->id)}}">
+                                                  <a rel="tooltip" class="btn btn-primary btn-link" title="" data-original-title="Editar estado" href="{{action('EstadoController@edit', $anuncios->id)}}">
                                                       <i class="material-icons">edit</i>
                                                       <div class="ripple-container"></div>
                                                   </a>
-                                                  <button type="button" class="btn btn-danger btn-link" rel="tooltip" title="" data-original-title="Eliminar" onclick="confirm('{{ __("Estas seguro que deseas eliminar este estado?") }}') ? this.parentElement.submit() : ''">
+                                                  <button type="button" class="btn btn-danger btn-link" rel="tooltip" title="" data-original-title="Eliminar" onclick="confirm('{{ __("Estas seguro que deseas eliminar este anuncio?") }}') ? this.parentElement.submit() : ''">
                                                       <i class="material-icons">close</i>
                                                       <div class="ripple-container"></div>
                                                   </button>
