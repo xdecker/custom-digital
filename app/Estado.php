@@ -12,4 +12,8 @@ class Estado extends Model
     ];
 
     protected $hidden = [];
+
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 }
