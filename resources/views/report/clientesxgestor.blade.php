@@ -1,84 +1,133 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Clientes por anuncios</title>
-    <link rel="cd-touch-icon" sizes="76x76" href="{{ asset('material') }}/img/cd-icon.png">
-    <link rel="icon" type="image/png" href="{{ asset('material') }}/img/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-   <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <!-- CSS Files -->
-    <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+@extends('layouts.app', ['activePage' => 'Reportes', 'titlePage' => __('Reportes')])
+
+
+@section('content')
+
+
+
+    <div class="content">
+
+        <div class="container-fluid">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Reporte de Clientes Asignados por Gestor   <?php setlocale(LC_TIME,"es_EC"); $date = getDate();
+                            echo " $date[weekday] $date[mday], $date[month], $date[year]"?></h4>
+                        <p class="card-category"></p>
+                    </div>
+                    <div class="card-body" align="center">
+                        <div id="pie_chart" style="width:750px; height:350px;">
+
+                        </div>
+
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-borderless" style="text-align:center; vertical-align:middle">
+
+                                <tbody>
+
+                                </tbody>
+                            </table>
+
+
+                            <br> <br>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+@endsection
+
+@push('js')
 
     <script type="text/javascript">
+
+        $(document).ready(function(){
+
+
+            fetch_data3();
+
+
+            function fetch_data3()
+            {
+                $.ajax({
+                    url:"/in/table/fetch_data3",
+                    dataType:"json",
+                    success:function(data)
+                    {
+                        var html = '';
+                        console.log(data);
+
+                            for (var count = 0; count < data.length; count++) {
+                                html += '<tr>';
+                                html += '<td class="table-dark" colspan="2"><h4><b> Nombre del Vendedor</b></h4></td>';
+                                html += '<td class="table-dark" colspan="3"><h4><b>'+data[count]['user'].name+'</b></h4></td>';
+                                html += '<tr>';
+
+                                html += '<tr class="table-secondary">';
+                                html += '<td> <b>#</b> </td>';
+                                html += '<td> <b>Nombre</b> </td>';
+                                html += '<td> <b>Email</b> </td>';
+                                html += '<td> <b>Teléfono</b> </td>';
+                                html += '<td> <b> Fecha de Registro </b> </td>';
+                                html += '<tr>';
+
+                                for (var contador = 0; contador< data[count]['clients'].length; contador++){
+                                    html += '<tr>';
+                                    html += '<td class="">';
+                                    html += contador + 1;
+                                    html += '</td>';
+
+                                    html += '<td>'+data[count]['clients'][contador].name+'</td>';
+                                    html += '<td>'+data[count]['clients'][contador].email+'</td>';
+                                    html += '<td>'+data[count]['clients'][contador].phone+'</td>';
+                                    html += '<td>'+data[count]['clients'][contador].registrationDate+'</td>';
+
+                                    html += '</tr>';
+
+                                }
+                            }
+
+                        $('tbody').html(html);
+                    }
+                });
+            }
+
+
+        });
+
+
+
+
+
         var json = <?php echo $sellers; ?>
 
-        //console.log( JSON.stringify(json) );
-        google.charts.load('current', {'packages':['corechart']});
+            //console.log( JSON.stringify(json) );
+            google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
-        google.charts.load('current', {packages: ['table']});
-        google.charts.setOnLoadCallback(drawTable);
+
 
         function drawChart()
         {
             var data = google.visualization.arrayToDataTable(json);
             var options = {
-                title : 'Porcentaje de Clientes Asignados'
+                title : 'Porcentaje de Clientes Asignados por Gestor',
+                pieHole: 0.4,
             };
             var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
             chart.draw(data, options);
         }
 
-        function drawTable()
-        {
-            var data = new google.visualization.arrayToDataTable(json);
-
-            var table = new google.visualization.Table(document.getElementById('table_div'));
-
-            table.draw(data, {showRowNumber: true, width: '70%', height: '100%'});
-        }
 
 
     </script>
-    <style>
-        td{
-            text-align:center !important;
-        }
-    </style>
-</head>
-<body>
-<div class="flex-center position-ref full-height">
-
-    <br />
-    <div class="container">
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Reporte de Clientes asignados por Gestor</h3>
-            </div>
-            <div class="panel-body" align="center">
-                <div id="pie_chart" style="width:750px; height:350px;">
-
-                </div>
-
-               <div id="table_div">
-
-               </div>
-
-            </div>
-        </div>
-
-    </div>
-
-
-</div>
-
-<script src="{{ asset('material') }}/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
-</body>
-</html>
+@endpush

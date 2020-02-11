@@ -38,7 +38,6 @@ class HomeController extends Controller
 
         $jclients_month= json_encode($clients_month);
 
-
         $clients_state = DB::table('clients')->join('estados', 'clients.estado_id','=','estados.id')
             ->select(
                 DB::raw('estados.nombreEstado as estado'),

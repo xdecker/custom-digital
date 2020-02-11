@@ -31,4 +31,9 @@ class Client extends Model
         return $this->hasOne(Estado::class, 'estado_id');
     }
 
+    public function seller()
+    {
+        return $this->belongsTo(Seller::class, 'seller_id');
+    }
+
 }

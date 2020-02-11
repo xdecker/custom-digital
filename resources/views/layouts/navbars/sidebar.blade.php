@@ -49,8 +49,15 @@
 
         <li class="nav-item{{ $activePage == 'Anuncios' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('anuncio') }}">
-                    <i class="material-icons">assessment</i>
+                    <i class="material-icons">poll</i>
                     <p>{{_('Anuncios')}}</p>
+                </a>
+        </li>
+
+        <li class="nav-item{{ $activePage == 'Reportes' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('reporte') }}">
+                    <i class="material-icons">pie_chart</i>
+                    <p>{{_('Reportes')}}</p>
                 </a>
         </li>
 
