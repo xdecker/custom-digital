@@ -118,18 +118,15 @@ class ReportController extends Controller
 
     protected function rseller_sales(Request $request)
     {
-        $seller_sales = $clients_month= Client::select(
-            DB::raw('count(*) as clients'),
-            DB::raw("DATE_FORMAT(created_at,'%M') as months")
-        )
-            ->groupBy('months')
-            ->orderBy('id')
+        $seller_sales = DB::table('sellers')->join('users', 'sellers.user_id','=','users.id')
+            ->select(
+                DB::raw('users.name as nombre'),
+                DB::raw('sellers.ventasEstimadas as captacionesEstimadas'),
+                DB::raw('sellers.ventasReales as captacionesReales'))
             ->get();
-            ->where('updated_at', '>', $request['fechaInicio'].' 00:00:00')
-            ->where('updated_at', '<=', session('fechaFin').' 23:59:59')
-            ->get();
+
         $jseller_sales = json_encode($seller_sales);
-        dd($jseller_sales);
+
 
         return view('report.seller_sales',compact('jseller_sales'));
     }
