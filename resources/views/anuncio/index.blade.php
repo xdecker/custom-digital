@@ -30,7 +30,7 @@
 
                       <div class="row">
                           <div class="col-12 text-right">
-                              <a href="{{ url('anuncio/create') }}" class="btn btn-sm btn-primary">{{ __('Crear anuncio') }}</a>
+                              <a href="{{ url('in/anuncio/create') }}" class="btn btn-sm btn-primary">{{ __('Crear anuncio') }}</a>
                           </div>
                       </div>
 
@@ -38,6 +38,10 @@
                           <table class="table table-hover">
                               <thead class="text-primary">
                               <th>{{ __('Nombre') }}</th>
+                              <th>{{ __('Palabras Claves') }}</th>
+                              <th>{{ __('Fecha de Inicio') }}</th>
+                              <th>{{ __('Fecha de Fin') }}</th>
+                              <th>{{ __('Presupuesto') }}</th>
 
                               <th class="text-right">{{ __('Acciones') }}</th>
 
@@ -47,16 +51,20 @@
                                   @foreach($anuncios as $anuncios)
                                       <tr>
                                           <td style="font-weight:500">{{$anuncios->nombre}}</td>
+                                          <td>{{$anuncios->palabrasClaves}}</td>
+                                          <td>{{$anuncios->fechaInicio}}</td>
+                                          <td>{{$anuncios->fechaFin}}</td>
+                                          <td>{{$anuncios->presupuesto}}</td>
 
                                           <td class ="td-actions text-right">
 
 
 
-                                              <form action="{{route('estado.destroy', $anuncios->id)}}" method="post">
+                                              <form action="{{route('anuncio.destroy', $anuncios->id)}}" method="post">
                                                   @csrf
-                                                  @method('delete')
 
-                                                  <a rel="tooltip" class="btn btn-primary btn-link" title="" data-original-title="Editar estado" href="{{action('EstadoController@edit', $anuncios->id)}}">
+
+                                                  <a rel="tooltip" class="btn btn-primary btn-link" title="" data-original-title="Editar estado" href="{{route('anuncio.update',$anuncios->id)}}">
                                                       <i class="material-icons">edit</i>
                                                       <div class="ripple-container"></div>
                                                   </a>
@@ -86,68 +94,6 @@
                           </table>
                       </div>
 
-                @foreach($anuncios as $anuncios)
-
-
-                <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('Nombre') }}</label>
-                  <div class="col-sm-7">
-                      <input type="text" class="form-control" value="{{$anuncios->nombre}}" readOnly="true"/>
-                  </div>
-                </div>
-                <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('Descripción') }}</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" value="{{$anuncios->descripcion}}" readOnly="true"/>
-                    </div>
-              </div>
-
-              <div class="row">
-                        <label class="col-sm-2 col-form-label">{{ __('Ubicación') }}</label>
-                        <div class="col-sm-7">
-                            <textarea name="" class="form-control"  rows="2" value="{{$anuncios->ubicacion}}" readonly="true">{{$anuncios->ubicacion}}</textarea>
-
-                        </div>
-              </div>
-
-              <div class="row">
-                        <label class="col-sm-2 col-form-label">{{ __('Palabras Claves') }}</label>
-                        <div class="col-sm-7">
-                            <textarea name="" class="form-control"  rows="2" value="{{$anuncios->palabrasClaves}}" readonly="true">{{$anuncios->palabrasClaves}}</textarea>
-
-                        </div>
-              </div>
-
-              <div class="row">
-                  <br>
-                  <label class="col-sm-2 col-form-label">{{ __('Fecha Inicio') }}</label>
-                  <div class="col-sm-7">
-                      <input type="text" class="form-control" value="{{$anuncios->fechaInicio}}" readOnly="true"/>
-                  </div>
-              </div>
-
-              <div class="row">
-                  <br>
-                  <label class="col-sm-2 col-form-label">{{ __('Fecha Fin') }}</label>
-                  <div class="col-sm-7">
-                      <input type="text" class="form-control" value="{{$anuncios->fechaFin}}" readOnly="true"/>
-                  </div>
-              </div>
-
-              <div class="row">
-                  <br>
-                  <label class="col-sm-2 col-form-label">{{ __('Presupuesto') }}</label>
-                  <div class="col-sm-7">
-                      <input type="text" class="form-control" value="{{$anuncios->presupuesto}}" readOnly="true"/>
-                  </div>
-              </div>
-
-                    <a href="{{route('anuncio.update', $anuncios->id)}}" class="btn btn-primary"> Editar </a>
-              </div>
-
-            </div>
-                <br>
-            @endforeach
           </div>
 
         </div>

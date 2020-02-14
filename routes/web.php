@@ -71,6 +71,7 @@ Route::middleware(['auth'])->prefix('in')->group(function () {
     Route::post('/anuncio', 'AnuncioController@store'); //Guardar nuevo anuncio, registrar
     Route::get('/anuncio/{id}/edit', 'AnuncioController@edit'); // formulario de edicion
     Route::post('/anuncio/{id}/edit', 'AnuncioController@update')->name('anuncio.update'); // update
+    Route::post('/anuncio/{id}/delete', 'AnuncioController@destroy')->name('anuncio.destroy'); //Eliminar anuncio
 
     Route::get('/seller', 'SellerController@perfil')->name('gestor'); //Ver mi perfil gestor
     Route::get('/import', 'ClientController@create'); // Importar bases, vista formulario

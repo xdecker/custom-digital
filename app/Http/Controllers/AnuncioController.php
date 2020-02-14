@@ -104,12 +104,19 @@ class AnuncioController extends Controller
         $anuncios->palabrasClaves = $request->input('palabrasClaves');
         $anuncios->fechaInicio = $request->input('fechaInicio');
         $anuncios->fechaFin = $request->input('fechaFin');
+        $anuncios->presupuesto = $request->input('presupuesto');
         $anuncios->save(); //Update
-        $anuncios = Anuncio::paginate(10);
 
-        return view('anuncio.index')->with(compact('anuncios'));
+        return redirect()->route('anuncio')->withStatus('Anuncio editado correctamente');
     }
 
 
+    public function destroy($id)
+    {
+        $anuncio = Anuncio::find($id);
+        $anuncio->delete();
+
+        return redirect()->route('anuncio')->withStatus(__('Anuncio eliminado correctamente.'));
+    }
 
 }
