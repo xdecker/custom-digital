@@ -23,6 +23,69 @@
                     </div>
                   </div>
                 @endif
+
+                <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form action="{{url('in/sendmail/masivo')}}" method="post">
+                                    @csrf
+
+                                <div class="modal-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>
+                                                {{_('Nombre')}}
+                                            </th>
+                                            <th>
+                                                {{_('Email')}}
+                                            </th>
+                                            <th>
+                                                {{_('Seleccionar')}}
+                                            </th>
+                                        </tr>
+                                        <tbody>
+
+                                        @foreach($users as $user)
+                                        <tr>
+                                            <td>{{$user->name}}</td>
+
+                                            <td>{{$user->email}}</td>
+
+                                            <td>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" name="mail_masivo[]" type="checkbox" value="{{$user->email}}">
+                                                        <span class="form-check-sign"><span class="check"></span> </span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" class="btn btn-primary" value="Enviar">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 <div class="row">
                   <div class="col-12 text-right">
                     <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Crear usuario') }}</a>

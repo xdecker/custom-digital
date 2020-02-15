@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c6290a-95d4-44ef-b3b1-dcf15ec8746d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/files_import/formato(2).xls1581560708" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_14_220244_add_column_company_id_to_files_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_14_221010_create_table_historial_personas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_14_221459_add_column_nombrearchivo_to_clients_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/create_masivo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnuncioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnuncioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/anuncio/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/anuncio/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footers/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footers/auth.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,13 +138,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/report" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/email" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\custom-digital\resources\views\report" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\email" />
+      <recent name="C:\xampp\htdocs\custom-digital\resources\views\report" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\file" />
       <recent name="C:\xampp\htdocs\custom-digital\public\css" />
       <recent name="C:\xampp\htdocs\custom-digital\resources\views\gestor" />
@@ -202,7 +203,7 @@
       <workItem from="1580692163483" duration="20231000" />
       <workItem from="1580864639409" duration="58693000" />
       <workItem from="1581312991603" duration="1377000" />
-      <workItem from="1581372337663" duration="17650000" />
+      <workItem from="1581372337663" duration="29092000" />
     </task>
     <servers />
   </component>

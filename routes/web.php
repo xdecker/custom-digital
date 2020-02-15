@@ -79,7 +79,9 @@ Route::middleware(['auth'])->prefix('in')->group(function () {
 
     Route::get('/sendmail', 'MessagesController@create'); //Veo el formulario para mandar mail
     Route::post('/sendmail', 'MessagesController@store');  //Realizo el envio
-
+    Route::post('/sendmail/masivo', 'MessagesController@masivo')->name('masive'); //Envios masivos por arreglo checkbox
+    Route::get('/sendmail/masivo', 'MessagesController@create_masivo'); //Veo el formulario para mandar mail
+    Route::post('/sendmail/masivo_mail', 'MessagesController@sendmasivo'); //Enviar correo masivos
 
     //REPORTES
     Route::get('/report', 'ReportController@create')->name('reporte');
